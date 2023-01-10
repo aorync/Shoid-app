@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_saved"
+    app:cardUseCompatPadding="true"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/img_saved_post"
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:scaleType="centerCrop"
+            android:background="@color/black"
+            />
+
+
+            <TextView
+                android:id="@+id/tv_title_saved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                tools:text="Title"
+                android:fontFamily="@font/poppins"
+                android:letterSpacing="0.06"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
+
+            <TextView
+                android:id="@+id/tv_author_saved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:fontFamily="@font/poppins"
+                tools:text="\@Username"
+                android:textAppearance="@style/TextAppearance.Material3.ActionBar.Subtitle"/>
+
+        </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

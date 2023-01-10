@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="264dp">
+
+                <ImageView
+                    android:id="@+id/img_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:background="@color/black" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_back_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardUseCompatPadding="true"
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="@color/background_btn_back"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_round_arrow_back_ios_new"
+                        app:tint="@color/material_on_primary_emphasis_high_type" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_author_detail"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/black"
+                    app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_author_name_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins"
+                        android:letterSpacing="0.06"
+                        tools:text="Username"
+                        android:textAppearance="@style/TextAppearance.Material3.ActionBar.Subtitle" />
+
+                    <TextView
+                        android:id="@+id/tv_like_post"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins"
+                        android:letterSpacing="0.06"
+                        tools:text="0 Suka"
+                        android:textColor="@color/material_on_background_emphasis_medium"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@+id/btn_fav_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:src="@drawable/ic_round_favorite_border" />
+
+                <ImageButton
+                    android:id="@+id/btn_patch_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_round_edit" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_date_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Date"
+                android:padding="8dp"
+                android:textColor="@color/material_on_background_emphasis_medium"/>
+
+
+            <TextView
+                android:id="@+id/tv_title_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:padding="8dp"
+                tools:text="Judul"
+                android:textAppearance="@style/TextAppearance.Material3.ActionBar.Title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_desc_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                tools:text="Deskripsi"
+                android:textAppearance="@style/TextAppearance.Material3.ActionBar.Subtitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_show_comments"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:text="Lihat Komentar"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:textAlignment="center"
+                android:text="Lainnya"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_explore"
+                app:spanCount="2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

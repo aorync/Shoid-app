@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.syntxr.serchpic.ui.DashboardFragment"
+        android:label="Beranda"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.syntxr.serchpic.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/add"
+        android:name="com.syntxr.serchpic.ui.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" >
+        <action
+            android:id="@+id/action_add_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.syntxr.serchpic.SearchActivity"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+</navigation>

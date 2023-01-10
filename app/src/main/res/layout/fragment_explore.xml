@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ExploreFragment">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tv_not_post"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.Material3.ActionBar.Title"
+                android:text="Tidak ada postingan yang sesuai"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_explorer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_explore"
+                app:spanCount="2"/>
+
+        </FrameLayout>
+
+
+</LinearLayout>

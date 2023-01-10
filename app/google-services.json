@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "814598513271",
+    "project_id": "serchpic-c166a",
+    "storage_bucket": "serchpic-c166a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814598513271:android:6e18d40ab766913ab8dc72",
+        "android_client_info": {
+          "package_name": "com.syntxr.serchpic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814598513271-v9jecq15ogkje5dv6ee1nq3s08tit4kf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaHTgMF_VmhbWnv0sSZVLE87_zHZWvPUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814598513271-v9jecq15ogkje5dv6ee1nq3s08tit4kf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
